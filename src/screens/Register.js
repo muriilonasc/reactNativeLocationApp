@@ -3,14 +3,16 @@ import MyTextInput from '../components/MyTextInput';
 import Btn from '../components/btn';
 import LogoImage from '../components/logoImage';
 import React, { useState } from 'react';
-import { createUserWithEmailAndPassword} from 'firebase/auth'
-import { auth } from "../services/firebase"
+import { createUserWithEmailAndPassword} from 'firebase/auth'  // Função do Firebase para registrar um novo usuário com email e senha.
+import { auth } from "../services/firebase" // O objeto de autenticação do Firebase que foi configurado previamente em outro arquivo (../services/firebase).
 
 export default function Register() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');   // Armazena o valor do campo de email.
+  const [password, setPassword] = useState('');  // Armazena o valor do campo de senha.
 
-  async function createUser(){
+  async function createUser(){   
+    // Esta função é responsável por criar um novo usuário usando Firebase Authentication.
+    // Ela usa a função createUserWithEmailAndPassword para registrar o usuário com base no email e senha inseridos.
     await createUserWithEmailAndPassword(auth, email, password)
     .then(value => {
       console.log('cadastrado com sucesso \n' + value.user.uid);
@@ -30,6 +32,9 @@ export default function Register() {
     </View>
   );
 }
+// Componentes de entrada de texto personalizados, usados para coletar o nome, email,
+// senha e a confirmação da senha. No caso do email e senha, o valor é controlado pelos estados correspondentes (email e password),
+// e os eventos onChangeText são usados para atualizar esses estados.
 
 const styles = StyleSheet.create({
   container: {
