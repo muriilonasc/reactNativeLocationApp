@@ -22,6 +22,7 @@ export default function Register() {
     <View style={styles.container}>
       <LogoImage/>
       <Text style={styles.title}>Create Account</Text>
+      <MyTextInput  inputPlacehouder='Name'/>
       <MyTextInput  inputPlacehouder='Email' value={email} onChangeText={value => setEmail(value)}/>
       <MyTextInput  inputPlacehouder='Password' value={password} onChangeText={value => setPassword(value)}/>
       <MyTextInput  inputPlacehouder='Confirm password'/>
