@@ -3,17 +3,18 @@ import MyTextInput from '../components/MyTextInput';
 import Btn from '../components/btn';
 import LogoImage from '../components/logoImage';
 import React, { useState } from 'react';
-import { signInWithEmailAndPassword} from 'firebase/auth'
-import { auth } from "../services/firebase"
+import { signInWithEmailAndPassword} from 'firebase/auth'  // Função do Firebase Authentication usada para autenticar o usuário com email e senha.
+import { auth } from "../services/firebase"  // O objeto de autenticação do Firebase que foi configurado previamente em outro arquivo (../services/firebase).
 import { useNavigation } from '@react-navigation/native';
 
 export default function Login() {
   const navigation = useNavigation();
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');  // Armazena o email que o usuário insere no campo de entrada.
+  const [password, setPassword] = useState('');  // Armazena a senha que o usuário insere no campo de entrada.
 
   async function login(){
+    // A função login é responsável por autenticar o usuário usando o Firebase Authentication:
     await signInWithEmailAndPassword(auth, email, password)
     .then(value => {
       console.log('logado com sucesso!');
