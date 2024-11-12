@@ -5,7 +5,7 @@ import {Feather, MaterialCommunityIcons} from 'react-native-vector-icons'
 export default function LogoImage() {
   return (
     <View>
-      <MaterialCommunityIcons name= "map-marker-radius" size={100} color="#075eec" style={styles.logo} />
+      <MaterialCommunityIcons name= "crop-free" size={100} color="#075eec" style={styles.logo} />
 
     </View>
   );
