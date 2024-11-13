@@ -1,3 +1,4 @@
+# Avaliação Mensal: PDM
 # Login com Firebase Authentication e Firestore
 
 Este repositório contém a implementação de uma tela de **Login** e **Registro de Usuário** utilizando o **Firebase Authentication** e **Firestore** para autenticação e persistência de dados. O fluxo permite que usuários criem contas, façam login e sejam autenticados no aplicativo.
@@ -103,3 +104,14 @@ async function login() {
 - **Autenticação Firebase**: Verifica se o email e a senha são válidos e gerencia sessões de usuário.
 - **Navegação para Home**: Após o login bem-sucedido, o usuário é redirecionado para a tela principal.
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Avaliação Bimestral: PDM
+# Grupo: Murilo Nasc, Pedro Gustavo, Gabriel Souza, Richaard Gabriel, Kaua Oliveira
+
+# QR Code Scanner
+
+Este é um projeto simples desenvolvido para escanear QR Codes usando a biblioteca Expo Camera. O objetivo principal deste projeto é permitir a leitura e decodificação de QR Codes a partir de uma câmera conectada. O aplicativo utiliza a câmera do dispositivo para capturar imagens em tempo real e, em seguida, processa essas imagens para identificar e ler códigos QR. Quando um QR Code é detectado, o aplicativo exibe o conteúdo codificado no código, como URLs, textos ou outras informações.
+
+## Bibliotecas Usadas
+
+- **Expo Camera**: Biblioteca usada para acessar e controlar a câmera do dispositivo, capturando imagens em tempo real para a análise do QR Code.
