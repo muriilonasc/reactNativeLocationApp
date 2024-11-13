@@ -1,6 +1,7 @@
 import {useState, useRef} from "react"
-import { StyleSheet, Text, View , Button, Modal, Alert} from 'react-native';
+import { StyleSheet, Text, View , Button, Modal, Alert, TouchableOpacity} from 'react-native';
 import {CameraView, useCameraPermissions} from "expo-camera"
+import {Feather, MaterialCommunityIcons} from 'react-native-vector-icons'
 export default function Home() {
 
   const [modalVisible, setModalVisible] = useState(false)
@@ -28,7 +29,10 @@ export default function Home() {
 
   return (
     <View style={styles.container}>
-      <Text>Escaneie</Text>
+          <View>
+      <MaterialCommunityIcons name= "camera-plus-outline" size={140} color="#00d481" style={styles.logo} />
+    </View>
+      <Text style={styles.textoQR}>Escaneie</Text>
       <Button title="Ler QRCode" onPress={handleOpenCamera}/>
 
 
@@ -43,7 +47,7 @@ export default function Home() {
         }} />
 
         <View style={styles.footer}>
-        <Button title="Cancelar" onPress={() => setModalVisible (false)}/>
+        <Button  title="Cancelar" onPress={() => setModalVisible (false)}/>
         </View>
       </Modal>
     </View>
@@ -53,7 +57,7 @@ export default function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#181818',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -62,5 +66,12 @@ const styles = StyleSheet.create({
     bottom: 32,
     left: 32,
     right: 32
-  }
+  },
+  logo:{
+    marginBottom: 20
+   },
+   textoQR:{
+    color: '#fff',
+    fontSize: 16
+   }
 });

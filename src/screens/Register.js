@@ -23,7 +23,7 @@ export default function Register() {
   return (
     <View style={styles.container}>
       <LogoImage/>
-      <Text style={styles.title}>Create Account</Text>
+      <Text style={styles.title}>Quase lá! Só preencher os dados e você já pode começar a escanear!</Text>
       <MyTextInput  inputPlacehouder='Name'/>
       <MyTextInput  inputPlacehouder='Email' value={email} onChangeText={value => setEmail(value)}/>
       <MyTextInput  inputPlacehouder='Password' value={password} onChangeText={value => setPassword(value)}/>
@@ -39,14 +39,16 @@ export default function Register() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#181818',
     alignItems: 'center',
     justifyContent: 'center',
   },
   title:{
-    color: "#075eec",
+    color: "#ffffff",
     fontSize: 20,
     fontWeight: "800",
-    marginBottom: 30
+    marginBottom: 30,
+    marginLeft: 30,
+    marginRight:20
   }
 });

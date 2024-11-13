@@ -15,16 +15,17 @@ export default function MyTextInput({label, inputPlacehouder, value, onChangeTex
 
 const styles = StyleSheet.create({
   input:{
-    backgroundColor: '#e8ecf4',
+    backgroundColor: '#000000',
     height: 44,
+    width:250,
     paddingHorizontal: 40,
     borderRadius: 6,
     fontSize: 15,
     fontWeight: '500',
-    color: '#222',
+    color: '#828282',
     marginBottom: 15,
     borderWidth: 1,
-    borderColor: "#222"
+    borderColor: "#828282"
     
     },
      labelText: { 

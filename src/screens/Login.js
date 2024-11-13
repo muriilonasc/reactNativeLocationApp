@@ -26,7 +26,8 @@ export default function Login() {
   return (
     <View style={styles.container}>
       <LogoImage/>
-      <Text style={styles.title}>Welcome back.</Text>
+      <Text style={styles.title}>Ei, você! Vamos começar? 
+      Faça login para escanear</Text>
       <MyTextInput inputPlacehouder='Email' value={email} onChangeText={value => setEmail(value)}/>
       <MyTextInput inputPlacehouder='Password' value={password} onChangeText={value => setPassword(value)}/>
       <Btn btntext='Sign in' onPress={() => login()}/>
@@ -37,14 +38,18 @@ export default function Login() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#181818',
     alignItems: 'center',
     justifyContent: 'center',
   },
   title:{
-    color: "#075eec",
+    color: "#ffffff",
     fontSize: 20,
     fontWeight: "800",
-    marginBottom: 30
+    marginBottom: 30,
+    margin: 10,
+    marginLeft: 70,
+    marginRight: 60,
+    marginTop: 20
   }
 });
